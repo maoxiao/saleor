@@ -13,7 +13,7 @@ from .utils import get_attributes_dict_from_list
 registry = get_global_registry()
 
 
-def convert_form_fields(form_class, exclude):
+def convert_form_fields(form_class, exclude=None):
     """Convert form fields to Graphene fields"""
     fields = OrderedDict()
     if exclude is None:
