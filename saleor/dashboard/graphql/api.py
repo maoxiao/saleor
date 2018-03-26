@@ -12,7 +12,7 @@ from .page.types import resolve_all_pages
 from .product.filters import ProductFilter
 from .product.mutations import (
     CategoryCreateMutation, CategoryDelete, CategoryUpdateMutation,
-    ProductCreateMutation, ProductDeleteMutation)
+    ProductCreateMutation, ProductDeleteMutation, ProductUpdateMutation)
 
 
 class Query(graphene.ObjectType):
@@ -67,6 +67,7 @@ class Mutations(graphene.ObjectType):
 
     product_create = ProductCreateMutation.Field()
     product_delete = ProductDeleteMutation.Field()
+    product_update = ProductUpdateMutation.Field()
 
 
 schema = graphene.Schema(Query, Mutations)
